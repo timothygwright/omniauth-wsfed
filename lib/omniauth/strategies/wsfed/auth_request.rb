@@ -30,7 +30,7 @@ module OmniAuth
           wa      = SIGNIN_PARAM
           wtrealm = url_encode(strategy_settings[:realm])
           wreply  = url_encode(strategy_settings[:reply])
-          wctx    = "rm=0&id=passive&ru=%2Fauth%2Fwsfed%2Fcallback"
+          wctx    = rm=0&id=passive&ru=%2Fauth%2Fwsfed%2Fcallback
           wct     = url_encode(Time.now.utc)
           whr     = url_encode(args[:whr])
 
