@@ -30,11 +30,11 @@ module OmniAuth
           wa      = SIGNIN_PARAM
           wtrealm = url_encode(strategy_settings[:realm])
           wreply  = url_encode(strategy_settings[:reply])
-          wctx    = url_encode(strategy_settings[:reply])
+          wctx    = "rm=0&id=passive&ru=%2Fauth%2Fwsfed%2Fcallback"
           wct     = url_encode(Time.now.utc)
           whr     = url_encode(args[:whr])
 
-          query_string = "?wa=#{wa}&wtrealm=#{wtrealm}&wreply=#{wreply}&wctx="rm=0&id=passive&ru=%2Fauth%2Fwsfed%2Fcallback"&wct=#{wct}"
+          query_string = "?wa=#{wa}&wtrealm=#{wtrealm}&wreply=#{wreply}&wctx=#{wctx}&wct=#{wct}"
 
           unless whr.nil? or whr.empty?
             query_string = "#{query_string}&whr=#{whr}"
