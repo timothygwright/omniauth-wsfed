@@ -1,0 +1,12 @@
+# Rubymine
+.idea
+
+#RVM
+.rvmrc
+.ruby-version
+.ruby-gemset
+
+#Other
+.DS_Store
+*.gem
+Gemfile.lock

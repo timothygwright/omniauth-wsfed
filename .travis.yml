@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.6
+  - 2.5
+  - 2.4
+  - ruby-head
+  - jruby-19mode
+  - jruby-head
+before_install:
+  - gem install bundler
+script: bundle exec rspec spec
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-head
+  fast_finish: true
